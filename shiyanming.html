@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .top {
+        width: 70%;
+        height: 50px;
+        display: flex;
+        margin-left: 15%;
+        position: fixed;
+        z-index: 114514;
+      }
+      .top > div {
+        width: 20%;
+        height: 100%;
+      }
+      a {
+        color: rgb(250, 240, 240);
+        font-size: 20px;
+        font-style: italic;
+      }
+      #toplogo {
+        width: 30%;
+        background-color: red;
+        margin-right: 40px;
+      }
+      .background{
+        margin-top: 0;
+      }
+      .welcome {
+        width: 55%;
+        margin: 50px auto;
+        display: flex;
+        border: dimgrey;
+        border-style: solid;
+        background-color:white ;
+      }
+      .welcome > div > span {
+        margin: auto;
+        font-size: 55px;
+        font-family: Microsoft YaHei;
+        font-style: italic;
+      }
+      .welcome > img {
+        display: inline;
+      }
+      .welcome > div > p {
+        font-size: 20px;
+        font-family: Microsoft YaHei;
+        margin: 20px;
+      }
+      .introduce {
+        width: 55%;
+        margin: 50px auto;
+        border: dimgrey;
+        border-style: solid;
+      }
+      .introduce > .introduce_title {
+        width: 262.3px;
+        margin: auto;
+      }
+      .introduce > .goods {
+        float: left;
+        width: 30%;
+        margin: 50px 10px;
+        font-family: "Courier New", Courier, monospace;
+        line-height: 30px;
+        text-indent: 20px;
+      }
+      .introduce > button {
+        width: 33.3%;
+        background-color: #2b2b2b;
+        text-align: center;
+        font-size: 20px;
+        color: white;
+        padding-left: 5%;
+        padding-right: 5%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        margin-left: 33.3%;
+      }
+      .introduce > button:hover {
+        width: 33.3%;
+        background-color: #cecbcb;
+        text-align: center;
+        font-size: 20px;
+        color: rgb(7, 7, 7);
+        padding-left: 5%;
+        padding-right: 5%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        margin-left: 33.3%;
+      }
+      .comment {
+        width: 55%;
+        margin: 50px auto;
+        
+      }
+      .comment > .question {
+        text-align: center;
+        width: 100%;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        font-size: 30px;
+        font-family: monospace;
+      }
+      .comment > .answer {
+        width: 75%;
+        margin: auto;
+        border: black;
+        border-style: solid;
+        position: relative;
+        background-color:white;
+      }
+      .comment > .answer >.img{
+        margin: auto;
+        margin-top: 25px;
+        margin-bottom: 10px;
+        width: 20%;
+      }
+      .comment > .answer >p{
+        padding-left: 10%;
+        padding-right: 10%;
+        font-size: 15px;
+      }
+      #buy{
+        width: 33.3%;
+        background-color: #2b2b2b;
+        text-align: center;
+        font-size: 20px;
+        color: white;
+        padding-left: 5%;
+        padding-right: 5%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        margin-left: 33.3%;
+        margin-bottom: 50px;
+      }
+      #buy:hover{
+        width: 33.3%;
+        background-color: #4a3e42;
+        text-align: center;
+        font-size: 20px;
+        color: rgb(7, 7, 7);
+        padding-left: 5%;
+        padding-right: 5%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        margin-left: 33.3%;
+        margin-bottom: 50px;
+      }
+      .pictures{
+        position: relative;
+        display: flex;
+        flex-direction:row ;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        border: solid;
+        background-color: white;
+      }
+      .pictures img{
+        width: 100%;
+        height: 100%;
+      }
+      .recommend {
+        width: 55%;
+        margin: 50px auto;
+        margin-top: 0;
+        border: dimgrey;
+        border-style: solid;
+        background-color: white;
+      }
+      .rec{
+        background-color: white;
+        border: black;
+      }
+      .rec>div{
+        margin-top: 20px;
+        margin-bottom: 20px;
+        margin-left: 20px;
+        margin-right: 20px;
+      }
+      .rec>div>div{
+        margin-top: 5px;
+        margin-left: 10px;
+        font-style: italic;
+      }
+      #rec_button{
+        width: 20%;
+        background-color: red;
+        text-align: center;
+        font-size: 20px;
+        color: white;
+        padding-left: 5%;
+        padding-right: 5%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        margin-left: 40%;
+        margin-bottom: 50px;
+      }
+      #rec_button:hover{
+        width: 20%;
+        background-color: #db1e5d;
+        text-align: center;
+        font-size: 20px;
+        color: rgb(7, 7, 7);
+        padding-left: 5%;
+        padding-right: 5%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        margin-left: 40%;
+        margin-bottom: 50px;
+      }
+      #play{
+        width: 180px;
+        height: 120px;
+        position: absolute;
+        margin-left: 150px;
+        margin-top: -90PX;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="top">
+      <div><a>新品推荐</a></div>
+      <div><a>在线购买产品</a></div>
+      <div id="toplogo">
+        <img
+          src="https://flowermooon.oss-cn-beijing.aliyuncs.com/logo.png"
+          width="100%"
+          height="100%"
+        />
+      </div>
+      <div><a>企业礼包</a></div>
+      <div><a>品牌介绍</a></div>
+    </div>
+    <div class="bakground">
+      <img
+        src="https://flowermooon.oss-cn-beijing.aliyuncs.com/background(%E5%90%AB%E6%96%87%E5%AD%97).png"
+        width="100%"
+        height="100%"
+      />
+      <div style="background-color: #d3cfd1; width: 100%;height: 350px; position: absolute;z-index: -1008611;margin-top: 20px;" ></div>
+    </div>
+    <div style="background-color: #dad8d9; width: 100%;height: 300px; position: absolute;z-index: -1008611;margin-top: 1005px;" ></div>
+    </div>
+    <div style="background-color: #6f6d6d; width: 100%;height: 400px; position: absolute;z-index: -1008610;margin-top: 1303px;" ></div>
+    </div>
+    <div style="background-color: #6a6a6a; width: 100%;height: 290px; position: absolute;z-index: -1008611;margin-top: 2432px;" ></div>
+    </div>
+    <div class="welcome">
+      <div style="width: 37%; margin-right: 5% ">
+        <img
+          src="https://flowermooon.oss-cn-beijing.aliyuncs.com/welcome.png"
+          height="100%"
+          width="100%"
+        />
+        <div id = "play"><img src="https://flowermooon.oss-cn-beijing.aliyuncs.com/play.png" width="100%" height="100%"/>
+        </div>
+      </div>
+      <div style="width: 63%">
+        <span>welcome to lamy</span>
+        <p>
+          德国书写工具品牌LAMY始创人C•Josef Lamy于1930年在海德
+          堡创立了欧瑟斯墨水笔制造厂.1952年，崭露头角的LAMY 流线
+          型墨水笔，震撼问世, 彰显公司的创新敏锐触觉。1966年终于打
+        </p>
+        <p>
+          造出令人耳目一新的现代经典之作-LAMY 2000系列。产品撮合
+          了聚碳酸酯与不锈钢材质，绝妙的配搭，使之从芸芸众生的书写
+          工具中脱颖而出，时至今日，依然在市场具有影响力
+        </p>
+      </div>
+    </div>
+    <div class="introduce">
+      <div class="introduce_title">
+        <span style="font-size: 45px; font-family: monospace; font-weight: 900"
+          >LAMY</span
+        ><span style="font-size: 45px; font-family: monospace">各系列</span>
+      </div>
+      <div class="goods">
+        <p class="title">【恒星系列 墨水笔】</p>
+        <p>
+          LAMY 恒星系列延续了 LAMY 的时尚造型，打造出锦上添花的极致品质
+          。此系列全部均由氧化 独特的凹陷式笔握以及弹性铜线笔夹 富的颜色让 LAMY
+          恒星系列突破了传统 散发着无限的青春魅力。
+        </p>
+      </div>
+      <div class="goods">
+        <p class="title">【狩猎系列限量色墨水笔 】</p>
+        <p>
+          色彩丰富，颜色亮丽，不仅是可以作为书 写工具，同样是很好的装饰品
+          宽大的笔夹设计，可随时夹在包带、牛仔裤、
+          T恤袖口上，让您感受创意方便的携带方式 笔身通体材质采用车用强力ABS材料
+        </p>
+      </div>
+      <div class="goods">
+        <p class="title">【喜悦系列美术笔 】</p>
+        <p>
+          用以绘图、写艺术字、艺术签名 扁平状的笔尖设计，适合书写艺术字
+          立体感极佳.1、1.5、1.9三种笔尖可供选择
+          ，可书写粗细不等的立体字，让您随时 感受变化的乐趣复古的笔杆设计
+          ，经典又与众不同，显示出独特的欣赏品味
+        </p>
+      </div>
+      <button>了解详细>></button>
+      <div>
+        <img src="https://flowermooon.oss-cn-beijing.aliyuncs.com/twopens.png"width="100%"/>
+      </div>
+    </div>
+    <div class="comment">
+      <div class="question">Form Germany<br />What people are saying?</div>
+      <div></div><div class="answer">
+        <div class ="img">
+          <img
+            src="https://flowermooon.oss-cn-beijing.aliyuncs.com/%E5%A4%B4%E5%83%8F.png"style = "z-index:-1;"
+          />
+        </div>
+        <p>
+          使用令人难以置信的生产技术和坚持极高水平的精准要求，仅使用一种
+          材质，也足以成就出这款永恒的设计。产品本身是体现不同加工程序和
+          制造工艺。手工打磨的亚光拉丝表面充分体现了品牌对细节的注重。
+        </p>
+        </div>
+      
+        <div style="margin: auto;text-align: center; margin-top: 50px;font-size: 20px;font-style: italic;color: white;">choose<br/> our products</div>
+        <div class = "pictures">
+          <div class = "picture1&2" style="width: 30%;height: 100%; margin:1.5%">
+            <img src="https://flowermooon.oss-cn-beijing.aliyuncs.com/pic1.png"/>
+            <img src="https://flowermooon.oss-cn-beijing.aliyuncs.com/pic2.png"/>
+          </div>
+          <div class ="picture3&4"style="width: 30%;height: 100%; margin:1.5%">
+            <img src="https://flowermooon.oss-cn-beijing.aliyuncs.com/pic3.png"/>
+            <img src="https://flowermooon.oss-cn-beijing.aliyuncs.com/pic4.png"/>
+          </div>
+          <div class = picture5&6 style="width: 30%;height: 100%; margin:1.5%">
+            <img src="https://flowermooon.oss-cn-beijing.aliyuncs.com/pic5.png"/>
+            <img src="https://flowermooon.oss-cn-beijing.aliyuncs.com/pic6.png"/>
+          </div>
+        </div>
+        <button id = "buy">戳我速购>></button>
+      </div>
+    </div>
+    <div class="recommend">
+      <div class ="rec">
+        <div style="display: flex;">
+          <img src="https://flowermooon.oss-cn-beijing.aliyuncs.com/rpic3.png" />
+          <div>
+            You make millions of decisions that is mean nothing，and then one day
+          your order takes out life.
+          </div>
+        </div>
+        <div style="display: flex;">
+          <img src="https://flowermooon.oss-cn-beijing.aliyuncs.com/rpic2.png" />
+        <div>
+          It's sad when you realize you aren't is as important to someone as you
+          thought you were.
+        </div>
+      </div>
+        <div style="display: flex;">
+          <img src="https://flowermooon.oss-cn-beijing.aliyuncs.com/rpic1.png" />
+        <div>
+          Love is unequal, so don't count how much one contributes, and which is
+          more active.
+        </div></div>
+      </div>
+    </div>
+    <button id = "rec_button">新品推荐>></button>
+    <div class="bottom">
+      <div><img src="https://flowermooon.oss-cn-beijing.aliyuncs.com/bottom.png" width="100%"/></div>
+    </div>
+  </body>
+</html>
