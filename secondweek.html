@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style> 
+        .background{
+            margin:auto;
+            width: 600px;
+            height: 1060px;
+            position: relative;
+            z-index: -114514;
+        }
+        .top{
+            height: 120px;
+            width: 600px;
+            margin: auto;
+            position: relative;
+            top: -1060px;
+        }
+        .top>button{
+            height: 50px;
+            width: 50px;
+            border-radius: 25px;
+            border-color: #84c3cc;
+            font-size: 20px;
+            color: #c0dbe3;
+            background-color: #52abb8;
+        }
+        .top>div{
+            text-align: center;
+            width:465px ;
+            position: relative;
+            top: 40px;
+            left: 67.5px;
+            font-size: 32px;
+            color: #c0dbe3;
+        }
+        #back{
+            position: absolute;
+            left: 25px;
+            top: 35px;
+        }
+        #detail{
+            position: absolute;
+            right: 25px;
+            top: 35px;
+        }
+        .inputbox{
+            height: 300px;
+            width: 450px;
+            margin: auto;
+            position: relative;
+            top: -800px;
+            z-index: 1;
+        }
+        .inputbox>input{
+            width: 450px;
+            height: 23%;
+            border: 0;
+            font-size: 25px;
+            background-color: transparent;
+            border-bottom-style: solid;
+            border-bottom-width: 3px;
+            border-bottom-color: #889fc2;
+        }
+        .inputbox>input::placeholder{
+            color: white;
+        }
+        .inputbox>p>span:hover{
+            color: yellowgreen;
+        }
+        #addphoto{
+            height: 150px;
+            width: 150px;
+            border: solid;
+            border-width: 5px;
+            border-radius: 50%;
+            background-color:transparent;
+            font-size: 25px;
+            color: #c0dbe3;
+            position: absolute;
+            left: 225px;
+            top: 170px;
+        }
+        #signup{
+            height: 80px;
+            width: 450px;
+            background-color: white;
+            position: absolute;
+            top: 355px;
+            margin: auto;           
+            z-index: 1;
+            font-size: 32.96px;
+            color: #706d9f;
+            border-radius:45px;
+        }
+        #signup:hover{
+            height: 80px;
+            width: 450px;
+            background-color: rgb(208, 208, 208);
+            position: absolute;
+            top: 355px;
+            margin: auto;           
+            z-index: 1;
+            font-size: 32.96px;
+            color: #706d9f;
+            border-radius:45px;
+        }
+        .inputbox>p{
+            position: relative;
+            top: 450px;
+        }
+    </style>
+  </head>
+  <body>
+    <div class = "background">
+        <img src="https://flowermooon.oss-cn-beijing.aliyuncs.com/new.png"/></div>
+        <div class="top">
+            <button id = "back"><</button>
+            <div>sign up</div>
+            <button id = "detail">i</button>
+            <button id="addphoto"> <span style="font-size: 60px;">+</span><br/><span style="font-size: 30px;">photo</span> </button>
+        </div>
+        <div class = "inputbox">
+            <p style="text-align: center; color: white;">Allready a member? <span style="color: #3dfcb5; ">Sign In</span></p>
+            <button id = "signup">sign&nbsp;up</button>
+            <input type="text" placeholder="First&nbsp;Name">
+            <br/>
+            <input type="text" placeholder="Last&nbsp;Name">
+            <br/>
+            <input type="email" placeholder="Email&nbsp;Address">
+            <br/>
+            <input type="password" placeholder="Password">
+        </div>
+    </div>
+  </body>
